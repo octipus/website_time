@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Raleway:800|Merriweather+Sans|Share+Tech+Mono"); */
+ @import url("https://fonts.googleapis.com/css?family=Dancing+Script"); 
 
 @font-face {
   font-family: 'Champagne';
@@ -111,19 +111,21 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  font-size: clamp(1.2rem, -2.8rem + 3.333vw, 3.5rem);
   width: 100%;
 
   border-radius: 5px;
 
   overflow: hidden;
-  background:#936728;
   padding: 15px;
 
-  font-family: "Champagne Tech Mono", monospace;
-
-  border-bottom: var(--ui-shadow-border);
-  box-shadow: var(--ui-shadow);
+  font-family: "Champagne", monospace;
+  background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
+  background-size: 600vw 600vw;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textAnimate 8s linear infinite alternate;
 }
 
 .Message {
@@ -174,18 +176,18 @@ a {
 
 .edition {
   display: flex;
-  width: 100%;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding: 40px 0;
-  font-size: calc(.2em + 1vw);
-  white-space: nowrap;
+  padding: 5px 0;
+  font-family: 'Dancing Script';
+  font-size: calc(.2em + .5vw);
   background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
   background-size: 600vw 600vw;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textAnimate 5s linear infinite alternate;
+  animation: textAnimate 8s linear infinite alternate;
 }
 
 
@@ -285,7 +287,7 @@ html:after{
 
 
   /* button */
-  .btn, .Banner {
+  .btn {
     -webkit-text-size-adjust: 100%;
     --gridline-drop-shadow: drop-shadow( 0px 1px 0px rgba(240, 240, 240, 0.13));
     -webkit-font-smoothing: antialiased;
