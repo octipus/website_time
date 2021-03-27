@@ -14,15 +14,15 @@ $(window).on("load",function(){
     TweenLite.set(element, {
       css: {
         rotationY: index * 800 / 20,
-        transformOrigin: "50% 50% -420"
+        transformOrigin: "50% 50% -520"
       }
     });
     TweenMax.to(element, 20, {
       css: {
-        z:0.01,
+        z:0.1,
         rotationY: "+=159"
       },
-      repeat: 2, // 20
+      repeat: 6, // 20
       ease: Linear.easeNone
     });
   });

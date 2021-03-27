@@ -13,8 +13,8 @@
  */
 
  const app = express();
- app.use(compression());
- app.use(helmet());
+//  app.use(compression());
+//  app.use(helmet());
  const port = process.env.PORT || "8000";
 
 /**

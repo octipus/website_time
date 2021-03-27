@@ -1,4 +1,35 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:800|Merriweather+Sans|Share+Tech+Mono");
+/* @import url("https://fonts.googleapis.com/css?family=Raleway:800|Merriweather+Sans|Share+Tech+Mono"); */
+
+@font-face {
+  font-family: 'Champagne';
+  src:url('OpenSans-Regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Champagne';
+  src:url('/fonts/Champagne & Limousines Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Champagne';
+  src:url('/fonts/Champagne & Limousines Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'Champagne';
+  src:url('/fonts/Champagne & Limousines Italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+
+}
 
 :root {
   --ui-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
@@ -32,7 +63,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Champagne", sans-serif; 
   text-transform: uppercase;
 
   padding: 0;
@@ -42,7 +73,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(1.8rem, -0.1rem + 8.333vw, 3.5rem);
+  font-size: 20px;
 }
 
 a {
@@ -71,7 +102,8 @@ a {
 
   background-size: cover;
 
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Champagne", sans-serif;
+  letter-spacing: 4px;
 }
 
 .Banner {
@@ -88,7 +120,7 @@ a {
   background:#936728;
   padding: 15px;
 
-  font-family: "Share Tech Mono", monospace;
+  font-family: "Champagne Tech Mono", monospace;
 
   border-bottom: var(--ui-shadow-border);
   box-shadow: var(--ui-shadow);
@@ -140,7 +172,21 @@ a {
   border-bottom: var(--ui-shadow-border);
   box-shadow: var(--ui-shadow);}
 
-
+.edition {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 40px 0;
+  font-size: calc(.2em + 1vw);
+  white-space: nowrap;
+  background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
+  background-size: 600vw 600vw;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textAnimate 5s linear infinite alternate;
+}
 
 
 
@@ -148,9 +194,7 @@ a {
 
 
   html {
-    background: rgb(135,120,70);
-background: radial-gradient(circle, rgba(135,120,70,1) 0%, rgba(219,177,59,1) 30%, rgba(10,14,41,1) 69%, rgba(36,148,162,1) 100%);
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
   }
   
@@ -160,9 +204,9 @@ background: radial-gradient(circle, rgba(135,120,70,1) 0%, rgba(219,177,59,1) 30
   
   .demoWrapper {
     width: 100%;
-    height: 400px;
+    height: 40vh;
     -webkit-font-smoothing: antialiased;
-    margin: auto;
+    margin: 0 auto;
   }
   
   .stage {
@@ -208,7 +252,7 @@ html:after{
   left: calc(-1 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(90deg,  #202020, #200220);
+  background: linear-gradient(90deg,  #202020, #200220, #1D1F20);
   border-radius: calc(2 * var(--borderWidth));
   z-index: -1;
   animation: animatedgradient 6s ease alternate infinite;
@@ -241,7 +285,7 @@ html:after{
 
 
   /* button */
-  .btn {
+  .btn, .Banner {
     -webkit-text-size-adjust: 100%;
     --gridline-drop-shadow: drop-shadow( 0px 1px 0px rgba(240, 240, 240, 0.13));
     -webkit-font-smoothing: antialiased;
@@ -249,7 +293,7 @@ html:after{
     overflow: visible;
     text-transform: none;
     -webkit-appearance: button;
-    font-family: "Share Tech Mono", monospace;
+    font-family: "Champagne", monospace;
     letter-spacing: 3px;
     -webkit-box-align: center;
     align-items: center;
@@ -261,7 +305,7 @@ html:after{
     color: rgb(236, 14, 92);
     cursor: pointer;
     display: flex;
-    font-size: 20px;
+    font-size: clamp(1.2rem, -2.8rem + 3.333vw, 3.5rem);
     font-weight: 700;
     height: 72px;
     -webkit-box-pack: center;
@@ -285,5 +329,18 @@ html:after{
     }
     100% {
       background-position: 0% 50%;
+    }
+  }
+
+  @keyframes textAnimate {
+    from {
+      filter: hue-rotate(0deg);
+      background-position-x: 0%;
+      
+    }
+    to {
+      filter: hue-rotate(360deg);
+      background-position-x: 600vw;
+      
     }
   }
