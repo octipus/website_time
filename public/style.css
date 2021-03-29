@@ -121,6 +121,7 @@ a {
   width: 100%;
   overflow: hidden;
   padding: 15px;
+  margin-top:5vh;
   position: absolute;
   text-align:center;
   font-family: "Champagne", monospace;
@@ -164,8 +165,6 @@ a {
     transform-style: preserve-3d;
     height: 50vh;
     margin: 15px;
-    color: #ddd;
-    font-family: Arial, Helvetica, Verdana;
   }
   
   .box {
@@ -268,5 +267,23 @@ a {
       filter: hue-rotate(360deg);
       background-position-x: 600vw;
       
+    }
+  }
+
+
+
+  @media only screen and (max-width: 900px) {
+    .demoWrapper {
+      margin-bottom:15vh;
+    }
+    .stage {
+      height: 30vh;
+    }
+    .box {
+      width: 20vh;
+      height: 35.5vh;
+    }
+    .btn {
+      margin-bottom:15vh;
     }
   }
